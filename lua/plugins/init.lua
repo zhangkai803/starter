@@ -65,10 +65,6 @@ return {
   },
   {
     "mfussenegger/nvim-dap",
-    keys = {
-      { "<leader>db", "<cmd>DapToggleBreakpoint<cr>", desc = "Add breakpoint at line" },
-      { "<leader>dr", "<cmd>DapContinue<cr>", desc = "Start or continue the debugger" },
-    }
   },
   {
     "leoluz/nvim-dap-go",
