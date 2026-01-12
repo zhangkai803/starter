@@ -25,7 +25,7 @@ return {
   -- 		},
   -- 	},
   -- },
-  
+
   -- My custom plugins
   {
     "stevearc/aerial.nvim",

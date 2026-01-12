@@ -24,3 +24,5 @@ map("n", "<A-k>", ":m .-2<CR>== ", { desc = "Move up" })
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
 
+map("n", "<leader>ca", "<cmd> lua vim.lsp.buf.code_action() <CR>", { desc = "Code Action" })
+
