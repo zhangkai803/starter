@@ -35,3 +35,8 @@ require "autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.o.relativenumber = true
+vim.o.list = true
+vim.o.listchars = "space:·"
+

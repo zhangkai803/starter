@@ -31,6 +31,7 @@ return {
     "stevearc/aerial.nvim",
     event = "LspAttach", -- 当 LSP 启动时加载
     opts = {
+      show_guides = true,
       -- 强制使用树形结构
       layout = {
         max_width = { 40, 0.2 },
