@@ -38,5 +38,6 @@ end)
 
 vim.o.relativenumber = true
 vim.o.list = true
-vim.o.listchars = "space:·"
+vim.o.listchars = "space:·,tab:»·,trail:·,extends:>,precedes:<"
+vim.o.termguicolors = true
 
