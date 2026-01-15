@@ -105,4 +105,22 @@ return {
       require("dap-python").setup(path)
     end,
   },
+  {
+    "nvim-pack/nvim-spectre",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    cmd = "Spectre",
+    opts = {
+      -- open_cmd = 'vnew'
+      is_insert_mode = false, -- 进入界面时不默认进入插入模式
+      is_live_distance = true, -- 实时搜索
+      line_sep_start = '-----------------------------------------',
+      result_padding = '¦ ',
+      line_sep = '-----------------------------------------',
+      highlight = {
+          ui = "String",
+          search = "DiffDelete",
+          replace = "DiffAdd",
+      },
+    }
+  }
 }

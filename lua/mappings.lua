@@ -23,4 +23,7 @@ map("n", "<A-k>", ":m .-2<CR>== ", { desc = "Move line up" })
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
 map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code Action" })
+map("n", "<leader>sp", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Spectre 全局搜索替换面板" })
+map("n", "<leader>sw", '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "搜索当前单词" })
+map("v", "<leader>sw", '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "搜索选中的文本" })
 
