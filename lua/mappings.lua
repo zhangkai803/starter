@@ -26,4 +26,6 @@ map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code 
 map("n", "<leader>sp", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Spectre 全局搜索替换面板" })
 map("n", "<leader>sw", '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "搜索当前单词" })
 map("v", "<leader>sw", '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "搜索选中的文本" })
+map("n", "gd", "gdzz", { desc = "LSP Go to Definition and center" })
+map("n", "<C-o>", "<C-o>zz", { desc = "Go back and center" })
 
