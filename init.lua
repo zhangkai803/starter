@@ -40,4 +40,5 @@ vim.o.relativenumber = true
 vim.o.list = true
 vim.o.listchars = "space:·,tab:»·,trail:·,extends:>,precedes:<"
 vim.o.termguicolors = true
+vim.opt.laststatus = 3
 
