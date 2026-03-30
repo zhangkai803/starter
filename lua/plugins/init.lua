@@ -28,22 +28,6 @@ return {
 
   -- My custom plugins
   {
-    "stevearc/aerial.nvim",
-    event = "LspAttach", -- 当 LSP 启动时加载
-    opts = {
-      show_guides = true,
-      -- 强制使用树形结构
-      layout = {
-        max_width = { 40, 0.2 },
-        default_direction = "right", -- 在右侧打开，不干扰左侧的 NvimTree
-      },
-      -- 自动折叠设置
-      manage_folds = true,
-      -- 实时跟随光标
-      highlight_on_hover = true,
-    },
-  },
-  {
     "gitsigns.nvim",
     opts = {
       current_line_blame = true, -- 开启行内提示
@@ -106,21 +90,19 @@ return {
     end,
   },
   {
-    "nvim-pack/nvim-spectre",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    cmd = "Spectre",
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
     opts = {
-      -- open_cmd = 'vnew'
-      is_insert_mode = false, -- 进入界面时不默认进入插入模式
-      is_live_distance = true, -- 实时搜索
-      line_sep_start = '-----------------------------------------',
-      result_padding = '¦ ',
-      line_sep = '-----------------------------------------',
-      highlight = {
-          ui = "String",
-          search = "DiffDelete",
-          replace = "DiffAdd",
-      },
-    }
+      words = { enabled = true },
+      picker = { enabled = true },
+      notifier = { enabled = true },
+      statuscolumn = { enabled = true },
+      input = { enabled = true },
+      bigfile = { enabled = true },
+      indent = { enabled = true },
+      git = { enabled = true },
+      outline = { enabled = true },
+    },
   }
 }
