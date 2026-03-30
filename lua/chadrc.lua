@@ -14,7 +14,49 @@ M.base46 = {
 	-- },
 }
 
-M.nvdash = { load_on_startup = true }
+M.nvdash = {
+  load_on_startup = true,
+      header = {
+      "                      ",
+      "  ▄▄         ▄ ▄▄▄▄▄▄▄",
+      "▄▀███▄     ▄██ █████▀ ",
+      "██▄▀███▄   ███        ",
+      "███  ▀███▄ ███        ",
+      "███    ▀██ ███        ",
+      "███      ▀ ███        ",
+      "▀██ █████▄▀█▀▄██████▄ ",
+      "  ▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀",
+      "                      ",
+      "  Powered By  eovim ",
+      "                      ",
+      "      代码如山寺      ",
+      "      禅机隐其中      ",
+      "      键落惊 BUG      ",
+      "      心空万象通      ",
+      "                      ",
+    },
+
+    buttons = {
+      { txt = "  Find Project", keys = "fp", cmd = ":lua Snacks.picker.projects()" },
+      { txt = "  Find File", keys = "ff", cmd = ":lua Snacks.picker.files()" },
+      { txt = "  Recent Files", keys = "fo", cmd = ":lua Snacks.picker.recent()" },
+      { txt = "󰈭  Find Word", keys = "fw", cmd = ":lua Snacks.picker.grep_word()" },
+      { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
+      { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
+      { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
+      {
+        txt = function()
+          local stats = require("lazy").stats()
+          local ms = math.floor(stats.startuptime) .. " ms"
+          return "  Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms
+        end,
+        hl = "NvDashFooter",
+        no_gap = true,
+        content = "fit",
+      },
+      { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
+    },
+}
 -- M.ui = {
 --       tabufline = {
 --          lazyload = false
