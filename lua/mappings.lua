@@ -54,6 +54,7 @@ map("n", "<leader>gd", function() require("snacks").picker.git_diff() end, { des
 map("n", "<leader>ss", function() require("snacks").scope.jump() end, { desc = "跳转到当前块起始位置" })
 map("n", "<leader>sw", function() require("snacks").picker.grep_word() end, { desc = "项目内搜索当前单词" })
 map("n", "<leader>fw", function() require("snacks").picker.grep() end, { desc = "项目内全局搜索" })
+map("n", "<leader>fz", function() require("snacks").picker.lines() end, { desc = "当前文件内搜索" })
 map("n", "<leader>ff", function() require("snacks").picker.files() end, { desc = "项目内文件搜索" })
 map("n", "<leader>fb", function() require("snacks").picker.buffers() end, { desc = "Buffer 搜索" })
 map("n", "<leader>fp", function() require("snacks").picker.projects() end, { desc = "搜索项目" })
