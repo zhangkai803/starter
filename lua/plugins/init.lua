@@ -1,4 +1,7 @@
 return {
+  { "nvim-telescope/telescope.nvim", enabled = false },
+  { "lukas-reineke/indent-blankline.nvim", enabled = false },
+  { "nvim-tree/nvim-tree.lua", enabled = false },
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
