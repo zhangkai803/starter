@@ -25,6 +25,9 @@ map("n", "<F6>", "<cmd>DapStepOver<CR>", { desc = "StepOver" })
 map("n", "<F7>", "<cmd>DapStepInto<CR>", { desc = "StepInto" })
 map("n", "<F8>", "<cmd>DapStepOut<CR>", { desc = "StepOut" })
 
+ -- outline
+map("n", "<leader>o", "<cmd>AerialToggle right<CR>", { desc = "Toggle Outline Tree" })
+ 
 -- move line
 map("n", "<A-j>", ":m .+1<CR>== ", { desc = "Move line down" })
 map("n", "<A-k>", ":m .-2<CR>== ", { desc = "Move line up" })
@@ -60,5 +63,4 @@ map("n", "<leader>sr", function() require("snacks").picker.resume() end, { desc 
 map("n", "<leader>sh", function() require("snacks").picker.search_history() end, { desc = "查看搜索历史记录" })
 map("n", "<leader>sj", function() require("snacks").picker.jumps() end, { desc = "跳转历史图谱" })
 map("n", "<leader>sd", function() require("snacks").picker.diagnostics() end, { desc = "文件诊断图谱" })
-map("n", "<leader>o", function() require("snacks").picker.lsp_symbols() end, { desc = "搜索代码符号 (Picker Outline)" })
 map("n", "<leader>ss", function() require("snacks").picker.lsp_symbols() end, { desc = "搜索代码符号 (Picker Outline)" })
