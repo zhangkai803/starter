@@ -34,6 +34,13 @@ map("n", "<A-k>", ":m .-2<CR>== ", { desc = "Move line up" })
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
 
+-- terminal mode
+map("t", "<Esc>", "<C-\\><C-n>", { desc = "退出终端模式" })
+map("t", "<C-h>", "<C-\\><C-n><C-w>h", { desc = "终端 → 左边窗口" })
+map("t", "<C-l>", "<C-\\><C-n><C-w>l", { desc = "终端 → 右边窗口" })
+map("t", "<C-j>", "<C-\\><C-n><C-w>j", { desc = "终端 → 下面窗口" })
+map("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "终端 → 上面窗口" })
+
 -- code action
 map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code Action" })
 
