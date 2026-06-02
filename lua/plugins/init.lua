@@ -33,6 +33,7 @@ return {
   {
     "stevearc/aerial.nvim",
     event = "LspAttach", -- 当 LSP 启动时加载
+    cmd = { "AerialToggle", "AerialOpen", "AerialClose", "AerialNavToggle" },
     opts = {
       show_guides = true,
       -- 强制使用树形结构
@@ -114,7 +115,7 @@ return {
     lazy = false,
     opts = {
       words = { enabled = true },
-      picker = { enabled = true },
+      picker = { enabled = true, sources = { explorer = { hidden = true } } },
       notifier = { enabled = true },
       statuscolumn = { enabled = true },
       input = { enabled = true },
