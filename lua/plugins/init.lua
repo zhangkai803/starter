@@ -50,7 +50,7 @@ return {
   {
     "gitsigns.nvim",
     opts = {
-      current_line_blame = false, -- 开启行内提示
+      current_line_blame = true, -- 开启行内提示
       current_line_blame_opts = {
         virt_text = true,
         virt_text_pos = "eol", -- 放在行尾
