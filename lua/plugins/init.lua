@@ -43,6 +43,7 @@ return {
       },
       -- 自动折叠设置
       manage_folds = true,
+      filter_kind = false,
       -- 实时跟随光标
       highlight_on_hover = true,
     },
