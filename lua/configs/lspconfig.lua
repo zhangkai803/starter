@@ -6,7 +6,7 @@ if vim.fn.isdirectory(homebrew_bin) == 1 then
   vim.env.PATH = homebrew_bin .. ":" .. vim.env.PATH
 end
 
-local servers = { "html", "cssls", "pyright", "gopls", "typos_lsp", "rust_analyzer", "vtsls", "yaml" }
+local servers = { "html", "cssls", "pyright", "gopls", "typos_lsp", "rust_analyzer", "vtsls", "yaml", "jsonls" }
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers 
