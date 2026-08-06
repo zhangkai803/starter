@@ -42,7 +42,7 @@ return {
         default_direction = "right", -- 在右侧打开，不干扰左侧的 NvimTree
       },
       -- 自动折叠设置
-      manage_folds = true,
+      manage_folds = false,
       filter_kind = false,
       -- 实时跟随光标
       highlight_on_hover = true,

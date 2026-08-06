@@ -21,3 +21,11 @@ vim.api.nvim_create_autocmd("FileChangedShellPost", {
     vim.notify("Buffer reloaded from disk", vim.log.levels.INFO, { title = "File changed" })
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    vim.wo.foldmethod = "expr"
+    vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    vim.wo.foldlevel = 99
+  end,
+})
